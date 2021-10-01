@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="navigator.css">
+    <script src="navigator.js" defer></script>
+
+    <script>
+        const NavigatorOptions = {
+            in_time: 750,
+            out_time: 750,
+            hang_multiplier: 0.75,
+        }
+    </script>
+
+    <style>
+        section {
+            background-image: linear-gradient(45deg, #d299c2 0%, #fef9d7 100%);
+        }
+
+        section[name="docs"] {
+            position: inherit;
+            margin: 2.5rem 0;
+            background-image: linear-gradient(45deg, cadetblue 0%, cornflowerblue 100%);
+        }
+
+        code {
+            white-space: pre-line;
+            width: 100%;
+            text-align: left;
+            margin: 0.5rem 1rem 0;
+            color: white;
+            font-family: monospace;
+        }
+    </style>
+
+    <title>Navigator &mdash; Demo</title>
+
+</head>
+
+<body>
+
+
+    <section name="main">
+        <div class="container full">
+            <button href="/" class="full">Home</button>
+            <button to="docs" class="full">Docs</button>
+        </div>
+    </section>
+
+    <section name="docs">
+        <h2>Basics</h2>
+        <p>
+            To create a navigator driven page, simply import the CSS & JS: <br />
+            <code>
+                &lt;link rel="stylesheet" href="navigator.css"&gt;
+                &lt;script src="navigator.js" defer&gt;&lt;/script&gt;
+            </code> <br />
+
+            You're also free to define some basic settings: <br />
+            <code>
+                &lt;script&gt;
+                    &ensp;const NavigatorOptions = {
+                    &ensp;&ensp;in_time: 750,
+                    &ensp;&ensp;out_time: 750,
+                    &ensp;&ensp;hang_multiplier: 0.75,
+                    &ensp;}
+                &lt;/script&gt;
+            </code> <br />
+
+            Then, simply create some sections! <br />
+            <code>
+                &lt;section name="main"&gt;
+                &ensp;&lt;div class="container full"&gt;
+                &ensp;&lt;button href="/" class="full"&gt;Home&lt;/button&gt;
+                &ensp;&lt;button to="docs" class="full"&gt;Docs&lt;/button&gt;
+                &ensp;&lt;/div&gt;
+                &lt;/section&gt;
+            
+                &lt;section name="docs"&gt;
+                &ensp;...
+                &lt;/section&gt;
+            </code> <br />
+
+            Note that section named "main" will be loaded on page load, if it exists.
+
+        <h2>Buttons</h2>
+        You can use buttons to switch between sections by defining a "to" property, which provides a section name:
+        <br />
+        <code>
+            &lt;button to="main" class="full"&gt;Back&lt;/button&gt;
+        </code> <br />
+
+        You can also use buttons like anchor tags by defining a "href" property like so: <br />
+        <code>
+            &lt;button href="/" class="full"&gt;Home&lt;/button&gt;
+        </code> <br />
+
+        <h2>Javascript Functions</h2>
+        You can switch the current section by calling the <code>NavigateToSection(section, instant?)</code> <br />
+        function,
+        where section is the name of the section and instant is a boolean which, if true will switch ignoring the
+        in_time & out_time settings.
+        </p>
+
+        <div class="container full">
+            <button to="main" class="full">Back</button>
+        </div>
+    </section>
+
+</body>
+
+</html>

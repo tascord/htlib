@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/navigator/navigator.css">
+    <script src="/navigator/navigator.js" defer></script>
+
+    <script src="widget.js" defer></script>
+
+    <script>
+        const NavigatorOptions = {
+            in_time: 750,
+            out_time: 750,
+            hang_multiplier: 0.75,
+        }
+    </script>
+
+    <style>
+        section {
+            background-image: linear-gradient(45deg, #d299c2 0%, #fef9d7 100%);
+        }
+
+        section[name="docs"] {
+            position: inherit;
+            margin: 2.5rem 0;
+            background-image: linear-gradient(45deg, cadetblue 0%, cornflowerblue 100%);
+        }
+
+        code {
+            white-space: pre-line;
+            width: 100%;
+            text-align: left;
+            margin: 0.5rem 1rem 0;
+            color: white;
+            font-family: monospace;
+        }
+    </style>
+
+    <title>Discord Widget &mdash; Demo</title>
+
+</head>
+
+<body>
+
+    <section name="main">
+
+        <discord guild="469773639437516810" invite="NeqVuSy"></discord>
+        <div class="container full">
+            <button href="/" class="full">Home</button>
+            <button to="docs" class="full">Docs</button>
+        </div>
+
+    </section>
+
+    <section name="docs">
+
+        <h2>Basics</h2>
+        <p>
+            To enable widget handling, import the widget JS file: <br />
+            <code>
+                &lt;script src="widget.js" defer&gt;&lt;/script&gt;
+            </code> <br />
+
+            Then, simply create a discord element: <br />
+            <code>
+                &lt;discord guild="guild_id_here" invite="optional_invite"&gt;&lt;/discord&gt;
+            </code> <br />
+
+            Note in some cases an invite will need to be specified if the widget JSON does not provide one.
+
+        </p>
+
+        <div class="container full">
+            <button to="main" class="full">Back</button>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
