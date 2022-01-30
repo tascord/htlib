@@ -1,7 +1,6 @@
 $foreground: white;
 
 discord {
-
     display: grid;
     position: relative;
     grid-template-columns: 0.15fr 2fr 0.25fr;
@@ -13,7 +12,7 @@ discord {
     min-width: 300px;
     border-radius: 0.75rem;
 
-    background-image: linear-gradient(to right, #6268a5 0%, #5865F2  51%, #6268a5  100%);
+    background: linear-gradient(to right, #4786bd 0%, #6d78ed 51%, #7295d7 100%);
     background-size: 200% auto;
     outline: 2px solid transparent;
     border: none;

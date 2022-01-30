@@ -11,8 +11,8 @@ discord {
   width: 100%;
   min-width: 300px;
   border-radius: 0.75rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#6268a5), color-stop(51%, #5865F2), to(#6268a5));
-  background-image: linear-gradient(to right, #6268a5 0%, #5865F2 51%, #6268a5 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#4786bd), color-stop(51%, #6d78ed), to(#7295d7));
+  background: linear-gradient(to right, #4786bd 0%, #6d78ed 51%, #7295d7 100%);
   background-size: 200% auto;
   outline: 2px solid transparent;
   border: none;
